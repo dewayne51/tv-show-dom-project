@@ -4,14 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV Show Project | Dewayne Sewell (dewayne51)</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+   
+    <script
+      src="https://kit.fontawesome.com/87cbe84bd9.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <div id="root">
-      hello world
-    </div>
+     <section class="hero">
+      <div class="h__heading">
+        <h1 class="h__title">WayneFlix</h1>
+        <h2 class="h__subtitle">
+          By Dewayne Sewell
+        </h2>
+      </div>
+    </section>
+    <section class="header">
+      <select name="episodes" id="episodes">
+        <option value="-1">Select episode</option>
+      </select>
+      <button class="btn-reset">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+      <div class="search">
+        <label id="search-label" for="search-input"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></label>
+        <input
+          id="search-input"
+          type="text"
+          name="search-input"
+          placeholder="Search ..."
+        />
+        <p id="search-results"></p>
+      </div>
+    </section>
+    <section id="root"></section>
+    <div class="clear"></div>
+    <footer class="footer">
+      This content is from <a href="https://www.tvmaze.com/">TV MAZE</a>
+    </footer>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
