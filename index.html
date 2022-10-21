@@ -30,12 +30,18 @@
       </div>
     </section>
     <section class="header">
+      <div class="select__container">
+      <select name="shows" id="shows">
+        <option value="-1">Select show</option>
+      </select>
       <select name="episodes" id="episodes">
         <option value="-1">Select episode</option>
       </select>
       <button class="btn-reset">
         <i class="fa-solid fa-rotate-right"></i>
       </button>
+      </div>
+      
       <div class="search">
         <label id="search-label" for="search-input"
           ><i class="fa-solid fa-magnifying-glass"></i
@@ -51,14 +57,20 @@
     </section>
     <section id="root"></section>
     <div class="clear"></div>
-    <footer class="footer">
+  
+ <footer class="footer">
       This content is from <a href="https://www.tvmaze.com/">TV MAZE</a>
     </footer>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
 
+       <!-- Loads a provided function called getAllShows() which returns all shows -->
+    <script src="shows.js"></script>
+
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
+  
 </html>
+

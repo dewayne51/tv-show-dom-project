@@ -2,11 +2,23 @@ const inputSearch = document.getElementById("search-input");
 const selectTag = document.getElementById("episodes");
 const resetBtn = document.querySelector(".btn-reset");
 const rootElem = document.getElementById("root");
-const allEpisodes = getAllEpisodes();
+const showsSelectTag = document.getElementById("shows");
+const searchResults = document.getElementById("search-results");
+let showsTitles;
+let allEpisodes = null;
+let allShows = null;
+
 
 function setup() {
-  makePageForEpisodes(allEpisodes);
-  selectEpisode(allEpisodes);
+fetch("https://api.tvmaze.com/shows")
+.then((response) => response.json())
+.then((data) => {
+  allEpisodes = data
+ makePageForEpisodes(data);
+  selectEpisode(data);
+
+});
+ 
 }
 
 // Loads episodes cards
